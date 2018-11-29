@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>gioco1</title>
+ <img id="cuore"  src="http://www.laboratoriopesaro.com/wp-content/uploads/2017/03/Cuore-rosso.jpg"  width="105" height="100"/>
+ <button id="destra">D</button> 
+  <button id="sopra">S</button> 
+  <style>
+
+     #cuore {
+           position:absolute;
+left:50px;
+top:50px;
+        }
+	  
+	 
+</style>
 </head>
 <body>
-<img id="cuore" onmouseover="scappaImg()"  src="http://www.laboratoriopesaro.com/wp-content/uploads/2017/03/Cuore-rosso.jpg"  width="105" height="100"/>
 
-<script>
+
+
+ <script TYPE= "text/javascript">
+ var onDestraClick = function() {
+     
+       cuore.style.left=cuore.style.left+200+"px";
   
-function scappaImg() {
-    var x = event.clientX;
-    var y = event.clientY;
-    var cuore= document.getElementById("cuore");
-if (x=cuore.style.left) {
-cuore.style.left=x+50+"px";
-}
-}
-scappaImg()
-</script>
+    };
+    destraButton.addEventListener("click", onButtonClick);
+  var onSopraClick = function() {
+   
+       var  y=cuore.style.top;
+       
+       cuore.style.top=y+200+"px";
+       
+         
+    };
+   sopraButton.addEventListener("click", onButtonClick);
+ </script>
+
 </body>
 </html>
